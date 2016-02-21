@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- Reset -->
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- Jquery -->
+	<script src="http://code.jquery.com/jquery.js"></script>
+
+	<title>Crystal Game</title>
+</head>
+
+<body>
+
+	<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			<h1>Crystal Game!</h1>
+		</div>
+	</div>
+
+<!-- Game Instructions -->
+	<div class="row">
+		<div class="col-md-6 panel panel-default">
+			<div class="panel panel-heading">
+				<h4>How to play</h4>
+			</div>
+			<div class="panel-body">
+				<p>You are given a random number at the start of the game.</p>
+				<p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+				<p>You win the game by matching your total score to a random number. You lose the game if your total score surpasses the random number.</p>
+				<p>The value of each crystal is hidden from you until you click on it.</p>
+				<p>The value of the crystals will change after each game.</p>
+			</div>
+		</div>
+	</div>
+
+<!-- Random number and wins losses -->
+	<div class="row">
+		<div class="col-md-2 panel panel-default">
+			<div class="col-md-2 panel panel-body" id="randomNumber">
+				<!-- Random Number -->
+				Winning Number:
+			</div>
+		</div>
+
+		<div class="col-md-2 panel panel-default">
+			<div class="col-md-2 panel-body">
+				<!-- Wins/Losses -->
+				Wins:<div id="wins"></div>
+				Losses:<div id="losses"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+
+		
+				<!-- Crystal buttons -->
+				<div type="button" class="col-md-1 btn btn-default" id="red">
+					<img src="assets/images/red.png" alt="Red Crystal">
+				</div>
+				<div type= "button" class="col-md-1 btn btn-default" id="blue">
+					<img src="assets/images/blue.png" alt="Blue Crystal">
+				</div>
+				<div type="button" class="col-md-1 btn btn-default" id="yellow">
+					<img src="assets/images/yellow.png" alt="Yellow Crystal">
+				</div>
+				<div type="button" class="col-md-1 btn btn-default" id="green">
+					<img src="assets/images/green.png" alt="Green Crystal">
+				</div>
+			
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-md-2 panel panel-default">
+			<div class="col-md-2 panel-body">
+				<div class="col-md-2">
+					<div class="col-md-1">
+					<!-- Your score -->
+					Score:<div class="col-md-1" id="score"><!-- score variable --></div>	
+					</div>
+					<!-- score variable goes here -->
+					<div class="col-md-1" id="score"></div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<script src='assets/javascript/game.js'></script>
+</body>
+</html>
