@@ -24,6 +24,7 @@ var updateScore = function (){
 	// $('#score').replaceAll(score); jquery error?
 }
 
+// Should restart game and select new random numbers
 var restart = function (){
 	var score = 0;
 	var winningNumber = Math.floor((Math.random() * 100) + 1);
@@ -32,7 +33,7 @@ var restart = function (){
 	var yellow = Math.floor((Math.random() * 10) + 1);
 	var green = Math.floor((Math.random() * 10) + 1);
 	console.log(red, blue, yellow, green, winningNumber);
-	alert('restart');
+	alert('restart function ran');
 	updateScore();
 }
 
@@ -40,12 +41,12 @@ var logic = function (){
 		// win/loss logic
 	if (score == winningNumber) {
 			wins = wins + 1; //++ not working?
-			alert('wins' + wins);
+			alert('You Win!');
 			restart();
 			}			
 		else if (score > winningNumber) {
 			losses = losses + 1;
-			alert('losses' + losses);
+			alert('You Lost!');
 			restart();
 			}
 		else {
@@ -62,10 +63,6 @@ $("#score").append(score);
 
 // Functions
 $(document).ready(function(){
-
-
-
-
 // Crystal Buttons
 $('#red').click(function(){
 			score = score + red;
@@ -86,7 +83,4 @@ $('#green').click(function(){
 			score = score + green;
 			logic();
 		})
-
-
-
 });
