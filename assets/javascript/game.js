@@ -24,23 +24,17 @@ var updateScore = function (){
 	// $('#score').replaceAll(score); jquery error?
 }
 
-// Should restart game and select new random numbers
+// Restarts game and resets random numbers
 var restart = function (){
-
-	// Change 1 - Remove all var keywords. Once you've declared a global variable its declared for good!
 	score = 0;
 	winningNumber = Math.floor((Math.random() * 100) + 1);
-
-	// CHANGE 2 -  Clear the randomNumber then add the new number
 	$("#randomNumber").empty();
 	$("#randomNumber").append(winningNumber);
-
 	red = Math.floor((Math.random() * 10) + 1);
 	blue = Math.floor((Math.random() * 10) + 1);
 	yellow = Math.floor((Math.random() * 10) + 1);
 	green = Math.floor((Math.random() * 10) + 1);
 	console.log(red, blue, yellow, green, winningNumber);
-	alert('restart function ran');
 	updateScore();
 }
 
@@ -48,11 +42,13 @@ var logic = function (){
 		// win/loss logic
 	if (score == winningNumber) {
 			wins = wins + 1; //++ not working?
+			document.getElementById('winaudio').play();
 			alert('You Win!');
 			restart();
 			}			
 		else if (score > winningNumber) {
 			losses = losses + 1;
+			document.getElementById('winaudio').play();
 			alert('You Lost!');
 			restart();
 			}
