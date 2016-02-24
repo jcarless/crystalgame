@@ -12,7 +12,7 @@ var blue = Math.floor((Math.random() * 10) + 1);
 var yellow = Math.floor((Math.random() * 10) + 1);
 var green = Math.floor((Math.random() * 10) + 1);
 // console.log(red, blue, yellow, green);
-
+var audio1 = $('#winaudio')[0];
 // update score in html
 var updateScore = function (){
 	$('#score').empty();
@@ -42,13 +42,12 @@ var logic = function (){
 		// win/loss logic
 	if (score == winningNumber) {
 			wins = wins + 1; //++ not working?
-			document.getElementById('winaudio').play();
+			audio1.play();
 			alert('You Win!');
 			restart();
 			}			
 		else if (score > winningNumber) {
 			losses = losses + 1;
-			document.getElementById('winaudio').play();
 			alert('You Lost!');
 			restart();
 			}
